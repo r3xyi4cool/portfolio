@@ -1,0 +1,424 @@
+:root {
+    --text-color: #ffffff;
+    --background-color: #0c1912;
+    --main-color: #00b894;
+    --button-color: #00d2a8;
+    --box-color: #132920;
+    --accent-color: #1cffc4;
+    --secondary-bg: #0f2318;
+    --gold-accent: #d4af37;
+    --highlight: #b3ffe6;
+    --dark-shadow: #08100c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    background-color: var(--background-color);
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Header */
+.navbar{
+    background-color: var(--secondary-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 15px 50px;
+}
+li{
+    list-style: none;
+}
+.left {
+    display: flex;
+    align-items: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+.left a{
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease-in-out;
+}
+.left a:hover{
+    color: #b7bbbe;
+}
+
+.right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+}
+.right li a {
+    position: relative;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 10px;
+    color: #ffff;
+    transition: color 0.3s ease-in-out;
+}
+
+.right li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: var(--button-color);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.right li a:hover {
+    color: var(--text-color);
+}
+
+.right li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    background-color: #ffff;
+}
+/* Hero */
+.hero-section {
+
+    margin: 10px 0;
+    padding: 0 50px;
+}
+
+.hero-container {
+    min-height: 100vh;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    min-height: 400px;
+    height: auto;
+    border-radius: 1rem;
+    padding: 5% 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-container .text {
+    flex: 5;
+    color: var(--text-color);
+}
+
+.hero-container .text h2 {
+    font-size: 45px;
+    color: var(--main-color);
+}
+
+.hero-container .text .links {
+    margin-top: 25px;
+}
+
+.hero-container .text .links a {
+    font-size: 20px;
+    display: inline-block;
+    position: relative;
+    padding: 10px 10px;
+    color: var(--text-color);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: color 0.4s ease-in-out;
+}
+
+.hero-container .text .links a::before,
+.hero-container .text .links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.5s ease-in-out;
+}
+
+.hero-container .text .links a::before {
+    top: 0;
+}
+
+.hero-container .text .links a::after {
+    bottom: 0;
+}
+
+.hero-container .text .links a:hover::before,
+.hero-container .text .links a:hover::after {
+    width: 100%;
+}
+
+.hero-container .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-container .headshot img {
+    border-radius: 10%;
+    width: 350px;
+}
+
+/* Hero Animations */
+
+.hero-container .text {
+    opacity: 0;
+    transform: rotate(-2deg);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.hero-container .text.animate {
+    opacity: 1;
+    transform: rotate(0);
+}
+
+.hero-container .headshot {
+    opacity: 0;
+    transform: rotate(2deg);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition-delay: 0.2s;
+}
+
+.hero-container .headshot.animate {
+    opacity: 1;
+    transform: rotate(0);
+}
+
+/* Skills */
+.skill-container {
+    min-height: 100vh;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+    min-height: 400px;
+    height: auto;
+    border-radius: 1rem;
+    padding: 5% 4%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+.skill-title{
+    font-size: 45px;
+    color: var(--main-color);
+}
+
+.skill-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.skill-box {
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--box-color);
+    box-shadow: 0 4px 12px var(--dark-shadow);
+    animation: fadeInUp 0.6s ease forwards;
+    flex: 1;
+    min-width: 300px;
+    
+}
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(28, 255, 196, 0.1);
+    border: 1px solid var(--main-color);   
+}
+
+.box-title {
+    font-size: 1.2rem;
+    font-size: 600;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    padding: 5px 12px;
+    color: var(--main-color);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    background-color: var(--secondary-bg);  
+    border: 1px solid rgba(28, 255, 196, 0.3);
+}
+
+.skill-tag:hover {
+    background-color: rgba(0, 184, 148, 0.2);
+    color: var(--highlight);
+}
+
+.skill-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: var(--gold-accent);
+}
+
+@media (max-width: 1024px) {
+    .hero-section {
+        padding: 0 30px;
+    }
+
+    .hero-container {
+        padding: 4% 3%;
+    }
+
+    .hero-container .text h2 {
+        font-size: 38px;
+    }
+
+    .hero-container .headshot img {
+        width: 280px;
+    }
+    
+
+    .skill-container {
+        padding: 4% 3%;
+    }
+    
+    .skill-title {
+        font-size: 38px;
+    }
+    
+    .skill-box {
+        min-width: 250px;
+    }
+}
+
+@media(max-width:768px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .right {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease-in-out;
+
+        background: rgba(15, 35, 24, 0.4);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+    }
+
+    .right li {
+        margin: 16px 0;
+    }
+
+    .right.active {
+        left: 0;
+        background: rgba(15, 35, 24, 0.4);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    .hero-section {
+        padding: 0 20px;
+        margin: 30px 0;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 25px;
+    }
+
+    .hero-container .text {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-container .text h2 {
+        font-size: 32px;
+    }
+
+    .hero-container .text p {
+        font-size: 16px;
+    }
+
+    .hero-container .headshot {
+        flex: none;
+        width: 100%;
+    }
+
+    .hero-container .headshot img {
+        width: 220px;
+    }
+
+    .skill-container {
+        min-height: 100vh;
+        padding: 15% 4%;
+    }
+    
+    .skill-title {
+        font-size: 32px;
+        text-align: center;
+    }
+    
+    .skill-grid {
+        flex-direction: column;
+    }
+    
+    .skill-box {
+        width: 100%;
+        min-width: unset;
+    }
+
+}
