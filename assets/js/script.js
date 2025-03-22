@@ -40,31 +40,67 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     const handleScrollAnimations = () => {
-        const skillTitle = document.querySelector(".skill-title");
-        if (skillTitle) {
-            const { isInView, isOutOfView } = checkVisibility(skillTitle);
+        // About Me 
+        const aboutTitle = document.querySelector(".about-title");
+        if (aboutTitle) {
+            const { isInView, isOutOfView } = checkVisibility(aboutTitle);
 
-            if (isInView && !skillTitle.classList.contains("animate")) {
-                skillTitle.classList.add("animate");
-            } else if (isOutOfView && skillTitle.classList.contains("animate")) {
-                skillTitle.classList.remove("animate");
+            if (isInView && !aboutTitle.classList.contains("animate")) {
+                aboutTitle.classList.add("animate");
+            } else if (isOutOfView && aboutTitle.classList.contains("animate")) {
+                aboutTitle.classList.remove("animate");
             }
         }
 
-        const skillBoxes = document.querySelectorAll(".skill-box");
-        skillBoxes.forEach((box, index) => {
+        const aboutImage = document.querySelector(".about-image");
+        if (aboutImage) {
+            const { isInView, isOutOfView } = checkVisibility(aboutImage);
+            
+            if (isInView && !aboutImage.classList.contains("animate")) {
+                aboutImage.classList.add("animate");
+            } else if (isOutOfView && aboutImage.classList.contains("animate")) {
+                aboutImage.classList.remove("animate");
+            }
+        }
+
+        const aboutText = document.querySelector(".about-text");
+        if (aboutText) {
+            const { isInView, isOutOfView } = checkVisibility(aboutText);
+            
+            if (isInView && !aboutText.classList.contains("animate")) {
+                aboutText.classList.add("animate");
+            } else if (isOutOfView && aboutText.classList.contains("animate")) {
+                aboutText.classList.remove("animate");
+            }
+        }
+
+        // Project section 
+        const projectTitle = document.querySelector(".project-title");
+        if (projectTitle) {
+            const { isInView, isOutOfView } = checkVisibility(projectTitle);
+
+            if (isInView && !projectTitle.classList.contains("animate")) {
+                projectTitle.classList.add("animate");
+            } else if (isOutOfView && projectTitle.classList.contains("animate")) {
+                projectTitle.classList.remove("animate");
+            }
+        }
+
+        const projectBoxes = document.querySelectorAll(".project-box");
+        projectBoxes.forEach((box, index) => {
             const { isInView, isOutOfView } = checkVisibility(box);
             
             if (isInView && !box.classList.contains("animate")) {
                 setTimeout(() => {
                     box.classList.add("animate");
-                }, 150 * index); 
+                }, 200 * index); 
             } else if (isOutOfView && box.classList.contains("animate")) {
                 box.classList.remove("animate");
                 box.style.transitionDelay = "0s";
             }
         });
 
+        // Hero section 
         if (heroText) {
             const { isInView, isOutOfView } = checkVisibility(heroText);
             if (isInView && !heroText.classList.contains("animate")) {

@@ -12,7 +12,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
@@ -20,14 +20,15 @@
     <title>Test Protfolio</title>
 </head>
 <body>
+    
     <nav class="navbar">
         <div class="left">
             <a href="/">Sanjay S</a>
         </div>
         <ul class="right">
+            <li><a href="#about"><span>About</span></a></li>
             <li><a href="#skills"><span>Skills</span></a></li>
             <li><a href="#project"><span>Project</span></a></li>
-            <li><a href="#present"><span>Present</span></a></li>
             <li><a href="#contact"><span>Contact</span></a></li>
         </ul>
         <div class="hamburger">
@@ -57,37 +58,62 @@
                     <img src="assets/images/5.jpg" alt="rexyiscool image">
                 </div>
             </div>
-        </section>        
+        </section>  
         
-        <!-- Skills -->
-        <section id="skills">
-            <div class="skill-container">
-            <h2 class="skill-title">Skills</h2>
-            <div class="skill-grid">
-                <div class="skill-box">
-                    <span class="skill-icon"><i class="fa-solid fa-laptop"></i></span>
-                    <div class="box-title">Programing Languages</div>
-                    <div class="skill-list">
-                        <div class="skill-tag">Python</div>
-                        <div class="skill-tag">Java</div>
-                        <div class="skill-tag">C</div>
-                        <div class="skill-tag">JavaScript</div>
-                        <div class="skill-tag">HTML/CSS</div>
-                        <div class="skill-tag">Rust</div>
+        <!-- About -->
+         <section id="about">
+            <div class="about-container">
+                <h2 class="about-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="assets/images/1.jpg" alt="rexyiscool again">
                     </div>
-                </div>
-                <div class="skill-box">
-                    <span class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
-                    <div class="box-title">Tools I Use</div>
-                    <div class="skill-list">
-                        <div class="skill-tag">VS Code</div>
-                        <div class="skill-tag">IntelliJ IDEA</div>
-                        <div class="skill-tag">Git</div>
-                        <div class="skill-tag">Github</div>
-                        <div class="skill-tag">Sublime</div>
+                    <div class="about-text">
+                        <p>
+                            Hello, I'm Sanjay, or rexyiscool on the internet. I began my development career at Malcraft as a developer and mod, 
+                            handling server systems and enhancing gameplay experiences. I then joined Lunaty as a Minecraft plugin coder, 
+                            where I handled custom plugins to expand server mechanics and player activity. Later on, I Joined BlitzMC along With my Malcraft Owner and the staff Team,
+                            where I handled work of server development and worked on many projects.
+                        </p>
+                        <p>
+                            Over time, I've worked on multiple plugin projects, refining my expertise in game mechanics, 
+                            basic backend development, and server administration. My experience includes configuring plugins, 
+                            integrating APIs, and adding quality of life features to the server. Beyond Minecraft,
+                            I've also explored indie game development, experimenting with game design and coding. 
+                            I'm passionate about problem-solving and automation, constantly pushing boundaries to create immersive experiences.
+                            My experience in server-side development and feature creation keeps growing, 
+                            enabling me to help build stable, effective, and interactive gaming platforms.
+                        </p>
                     </div>
                 </div>
             </div>
+         </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <div class="skill-container">
+                <h2 class="skill-title">Skills</h2>
+                <p class="skill-para">Programming languages and tools I have experience with.</p>
+                <div class="skill-grid">
+                    <div class="skill-box">
+                        <button class="skill-button">Python</button>
+                        <button class="skill-button">JavaScript</button>
+                        <button class="skill-button">Java</button>
+                    </div>
+                    
+                    <div class="skill-box">
+                        <button class="skill-button">HTML</button>
+                        <button class="skill-button">CSS</button>
+                        <button class="skill-button">C</button>
+                        <button class="skill-button">Rust</button>
+                    </div>
+                    
+                    <div class="skill-box">
+                        <button class="skill-button">VS Code</button>
+                        <button class="skill-button">Sublime</button>
+                        <button class="skill-button">IntellJ IDEA</button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -130,11 +156,10 @@
             </div>
         </section>
 
-        <!-- Present -->
-        <section id="present"></section>
-
         <!-- My Contacts -->
-        <section id="contact"></section>
+        <section id="contact">
+            
+        </section>
 
         <!-- Footer -->
          <footer class="footer">
