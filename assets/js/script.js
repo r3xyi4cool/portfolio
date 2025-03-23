@@ -123,14 +123,14 @@ document.addEventListener("DOMContentLoaded", () => {
     
         const skillBoxes = document.querySelectorAll(".skill-box");
         skillBoxes.forEach((box, index) => {
-            // Set the custom property for staggered animations
+            
             box.style.setProperty('--i', index + 1);
             
             const { isInView, isOutOfView } = checkVisibility(box);
             if (isInView && !box.classList.contains("animate")) {
                 setTimeout(() => {
                     box.classList.add("animate");
-                }, 100 * index); // Shorter delay than projects
+                }, 100 * index); 
             } else if (isOutOfView && box.classList.contains("animate")) {
                 box.classList.remove("animate");
                 box.style.transitionDelay = "0s";
@@ -153,6 +153,53 @@ document.addEventListener("DOMContentLoaded", () => {
                 heroImage.classList.add("animate");
             } else if (isOutOfView && heroImage.classList.contains("animate")) {
                 heroImage.classList.remove("animate");
+            }
+        }
+        
+        // Contact section animations
+        const contactTitle = document.querySelector(".contact-title");
+        if (contactTitle) {
+            const { isInView, isOutOfView } = checkVisibility(contactTitle);
+            if (isInView && !contactTitle.classList.contains("animate")) {
+                contactTitle.classList.add("animate");
+            } else if (isOutOfView && contactTitle.classList.contains("animate")) {
+                contactTitle.classList.remove("animate");
+            }
+        }
+
+        const contactContent = document.querySelector(".contact-content");
+        if (contactContent) {
+            const { isInView, isOutOfView } = checkVisibility(contactContent);
+            if (isInView && !contactContent.classList.contains("animate")) {
+                contactContent.classList.add("animate");
+            } else if (isOutOfView && contactContent.classList.contains("animate")) {
+                contactContent.classList.remove("animate");
+            }
+        }
+
+        const contactInputs = document.querySelectorAll(".contact-contact input, .contact-contact textarea");
+        contactInputs.forEach((input, index) => {
+            input.style.setProperty('--i', index + 1);
+            
+            const { isInView, isOutOfView } = checkVisibility(input);
+            
+            if (isInView && !input.classList.contains("animate")) {
+                setTimeout(() => {
+                    input.classList.add("animate");
+                }, 100 * index); 
+            } else if (isOutOfView && input.classList.contains("animate")) {
+                input.classList.remove("animate");
+                input.style.transitionDelay = "0s";
+            }
+        });
+
+        const contactButton = document.querySelector(".contact-contact button");
+        if (contactButton) {
+            const { isInView, isOutOfView } = checkVisibility(contactButton);
+            if (isInView && !contactButton.classList.contains("animate")) {
+                contactButton.classList.add("animate");
+            } else if (isOutOfView && contactButton.classList.contains("animate")) {
+                contactButton.classList.remove("animate");
             }
         }
     };
