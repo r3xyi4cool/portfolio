@@ -100,6 +100,43 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
+        // Skills section
+        const skillTitle = document.querySelector(".skill-title");
+        if (skillTitle) {
+            const { isInView, isOutOfView } = checkVisibility(skillTitle);
+            if (isInView && !skillTitle.classList.contains("animate")) {
+                skillTitle.classList.add("animate");
+            } else if (isOutOfView && skillTitle.classList.contains("animate")) {
+                skillTitle.classList.remove("animate");
+            }
+        }
+    
+        const skillPara = document.querySelector(".skill-para");
+        if (skillPara) {
+            const { isInView, isOutOfView } = checkVisibility(skillPara);
+            if (isInView && !skillPara.classList.contains("animate")) {
+                skillPara.classList.add("animate");
+            } else if (isOutOfView && skillPara.classList.contains("animate")) {
+                skillPara.classList.remove("animate");
+            }
+        }
+    
+        const skillBoxes = document.querySelectorAll(".skill-box");
+        skillBoxes.forEach((box, index) => {
+            // Set the custom property for staggered animations
+            box.style.setProperty('--i', index + 1);
+            
+            const { isInView, isOutOfView } = checkVisibility(box);
+            if (isInView && !box.classList.contains("animate")) {
+                setTimeout(() => {
+                    box.classList.add("animate");
+                }, 100 * index); // Shorter delay than projects
+            } else if (isOutOfView && box.classList.contains("animate")) {
+                box.classList.remove("animate");
+                box.style.transitionDelay = "0s";
+            }
+        });
+
         // Hero section 
         if (heroText) {
             const { isInView, isOutOfView } = checkVisibility(heroText);
