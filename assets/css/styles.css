@@ -30,8 +30,6 @@ a{
     text-decoration: none;
 }
 
-
-
 /* Header */
 .navbar{
     background-color: var(--secondary-bg);
@@ -460,7 +458,7 @@ li{
     margin: 10px auto; 
     height: auto;
     border-radius: 1rem;
-    padding: 5% 4%;
+    padding: 15px 4%;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
@@ -563,6 +561,7 @@ li{
     max-width: 250px;  
     max-height: 250px; 
     transition: transform 0.3s ease;
+    border-radius: 10px;
 }
 
 .project-box:hover .project-image img {
@@ -613,10 +612,11 @@ li{
     margin: 10px auto; 
     height: auto;
     border-radius: 1rem;
-    padding: 5% 4%;
+    padding: 10px 4%;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    margin-bottom: 25px;
 }
 
 .contact-title{
@@ -767,6 +767,31 @@ li{
     font-size: 13px;
     color: var(--main-color);
     margin-top: 10px;
+}
+
+.theme-switcher-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    
+}
+
+::-webkit-scrollbar {
+    width: 4px; 
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-bg); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-color); 
+    border-radius: 2px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color); 
 }
 
 @media screen and (max-width: 1300px) {
