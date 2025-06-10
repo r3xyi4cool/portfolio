@@ -889,9 +889,13 @@ li{
         text-align: center;
         transition: left 0.3s ease-in-out;
 
-        background: rgba(15, 35, 24, 0.4);
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
+        background: rgba(15, 35, 24, 0.95);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        border-radius: 0 0 15px 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        padding: 20px 0;
     }
 
     .right li {
