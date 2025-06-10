@@ -888,14 +888,12 @@ li{
         width: 100%;
         text-align: center;
         transition: left 0.3s ease-in-out;
-
-        background: rgba(15, 35, 24, 0.95);
+        background: var(--secondary-bg);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-
-        border-radius: 0 0 15px 15px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        z-index: 999;
         padding: 20px 0;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     }
 
     .right li {
