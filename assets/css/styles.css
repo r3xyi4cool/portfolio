@@ -239,17 +239,20 @@ li{
 
 .about-content {
     display: flex;
-    gap: 30px;
+    gap: 0px;
     align-items: center;
 }
 
 .about-image{
-    flex: 0 0 500px;
+    max-width: 350px;
+ 
+    margin-right: 20px;
 }
 
 .about-image img {
-    width: 70%;
-    border-radius: 0.5rem;
+   width: 100%;
+   border-radius: 0.5rem;
+   
 }
 
 .about-text {
