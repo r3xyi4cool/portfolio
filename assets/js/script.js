@@ -45,9 +45,7 @@ function setupScrollAnimations() {
         { selectors: [".skill-title", ".skill-para"], multiSelectors: [".skill-box"] },
         { 
             selectors: [".contact-title", ".contact-content"], 
-            multiSelectors: [".social-link"], 
-            formSelectors: [".contact-contact input, .contact-contact textarea"],
-            buttonSelector: ".contact-contact button"
+            multiSelectors: [".social-link"]
         }
     ];
 
@@ -81,24 +79,12 @@ function setupScrollAnimations() {
                         if (selector.includes("skill-box")) {
                             element.style.setProperty('--i', index + 1);
                         }
+                        if (selector.includes("social-link")) {
+                            element.style.setProperty('--i', index);
+                        }
                         toggleAnimation(element, index * 100);
                     });
                 });
-            }
-
-            if (section.formSelectors) {
-                section.formSelectors.forEach(selector => {
-                    const elements = document.querySelectorAll(selector);
-                    elements.forEach((element, index) => {
-                        toggleAnimation(element, index * 100);
-                    });
-                });
-            }
-            if (section.buttonSelector) {
-                const button = document.querySelector(section.buttonSelector);
-                if (button) {
-                    toggleAnimation(button);
-                }
             }
         });
     }
