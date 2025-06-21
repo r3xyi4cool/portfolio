@@ -43,7 +43,12 @@ function setupScrollAnimations() {
         { selectors: [".about-title", ".about-image", ".about-text"] },
         { selectors: [".project-title"], multiSelectors: [".project-box"] },
         { selectors: [".skill-title", ".skill-para"], multiSelectors: [".skill-box"] },
-        { selectors: [".contact-title", ".contact-content"], multiSelectors: [".contact-contact input, .contact-contact textarea"], buttonSelector: ".contact-contact button" }
+        { 
+            selectors: [".contact-title", ".contact-content"], 
+            multiSelectors: [".social-link"], 
+            formSelectors: [".contact-contact input, .contact-contact textarea"],
+            buttonSelector: ".contact-contact button"
+        }
     ];
 
     setTimeout(handleScrollAnimations, 300);
@@ -60,7 +65,6 @@ function setupScrollAnimations() {
     
     function handleScrollAnimations() {
         sections.forEach(section => {
-            // Handle single elements
             if (section.selectors) {
                 section.selectors.forEach(selector => {
                     const element = document.querySelector(selector);
@@ -77,6 +81,15 @@ function setupScrollAnimations() {
                         if (selector.includes("skill-box")) {
                             element.style.setProperty('--i', index + 1);
                         }
+                        toggleAnimation(element, index * 100);
+                    });
+                });
+            }
+
+            if (section.formSelectors) {
+                section.formSelectors.forEach(selector => {
+                    const elements = document.querySelectorAll(selector);
+                    elements.forEach((element, index) => {
                         toggleAnimation(element, index * 100);
                     });
                 });
