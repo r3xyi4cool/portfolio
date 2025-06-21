@@ -1,4 +1,0 @@
-name = "portfolio"
-type = "webpack"
-compatibility_date = "2025-06-21"
-site = { bucket = ".", entry-point = "workers-site" }
