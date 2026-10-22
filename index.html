@@ -1,64 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sanjay S</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANJAY S</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            -webkit-font-smoothing: antialiased;
+        }
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+        }
+
+        .col-left {
+            border-right: 1px solid #222222;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 40px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .section-label {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 10px;
+            font-weight: 700;
+            color: #666666;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+	nav span {
+	    
+            cursor: default;
+	}
+
+        .col-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            padding: 32px 28px;
+            
+        }
+
+        .box:last-child {
+            border-bottom: none;
+        }
+
+        .hero-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #dddddd;
+            margin-bottom: 24px;
+        }
+
+        .hero-text p {
+            margin-bottom: 8px;
+        }
+
+        .hero-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .links-group a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-weight: 600;
+        }
+
+        .into-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .into-item {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            color: #cccccc;
+        }
+
+        footer {
+            
+            padding: 16px 24px;
+            font-size: 11px;
+            color: #555555;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 12px; }
+            .grid-layout { grid-template-columns: 1fr; }
+            .col-left { border-right: none; border-bottom: 1px solid #222222; padding: 24px 20px; gap: 24px; }
+            .box { padding: 24px 20px; }
+            footer { flex-direction: column; gap: 6px; padding: 16px 20px; }
+        }
+    </style>
 </head>
 <body>
-
-  <header>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="about.html">About</a> |
-      <a href="project.html">Project</a> |
-      <a href="games.html">Games</a>
-    </nav>
-  </header>
-
-  <main>
-
-    <section>
-      <p>CS STUDENT · DEVELOPER · EXPLORER</p>
-      <h1>Hey, I'm Sanjay.</h1>
-      <h2>I build things to understand how they work.</h2>
-      <p>Interested in software, cybersecurity, and experiments that turn curiosity into something real.</p>
-      <p>
-        <a href="project.html">Explore projects ↗</a> |
-        <a href="about.html">About me ↗</a>
-      </p>
-    </section>
-
-    <section>
-      <h2>What I'm Into</h2>
-
-      <article>
-        <h3>01 — DEVELOPMENT</h3>
-        <p>Building and breaking things until they work.</p>
-      </article>
-
-      <article>
-        <h3>02 — CYBERSECURITY</h3>
-        <p>Exploring how systems stay secure.</p>
-      </article>
-
-      <article>
-        <h3>03 — PROJECTS</h3>
-        <p>Ideas turned into working experiments.</p>
-      </article>
-
-      <article>
-        <h3>04 — GAMES</h3>
-        <p>Play, explore, and discover.</p>
-      </article>
-    </section>
-
-  </main>
-
-  <footer>
-    <p>Made with curiosity &amp; ♡</p>
-    <p>© SANJAY S</p>
-  </footer>
-
+    <div class="page-container">
+        <div class="grid-layout">
+            <div class="col-left">
+                <div>
+                    <h1>SANJAY S</h1>
+                </div>
+                <div>
+                    <div class="section-label">SITE NAVIGATION</div>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">home</a><span>         $</span></li>
+    			    <li><a href="#about">about</a></li>
+    			    <li><a href="#project">projects</a></li>
+    			    <li><a href="#games">games</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="box">
+                    <div class="section-label">HOMEPAGE</div>
+                    <div class="hero-text">
+                        <p>Hey, I'm Sanjay.</p>
+                        <p>I build things to understand how they work (and occasionally why they don't).</p>
+                        <p>Into software, cybersecurity, and fixing problems I probably caused.</p>
+                    </div>
+                    <div class="links-group">
+                        <a href="#projects">Projects ↗</a>
+			<a href="#about">About ↗</a>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="section-label">sanjay@localhost:~$ interests</div>
+                    <div class="into-grid">
+                        <div class="into-item">~/development.sh</div>
+			<div class="into-item">~/security.sh</div>
+			<div class="into-item">~/projects.sh</div>
+			<div class="into-item">~/gaming.sh</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <span>Made with 99 bugs and 1 feature ♥︎</span>
+            <span>© SANJAY S</span>
+        </footer>
+    </div>
 </body>
 </html>
