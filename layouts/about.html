@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT | SANJAY S</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+        }
+
+        .col-left {
+            border-right: 1px solid #222222;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 40px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .section-label {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 10px;
+            font-weight: 700;
+            color: #666666;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        nav span {
+            cursor: default;
+        }
+
+        .col-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            padding: 32px 28px;
+        }
+
+        .about-wrap {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .about-img {
+            width: 110px;
+            height: 110px;
+            flex-shrink: 0;
+            object-fit: cover;
+            border: 1px solid #222222;
+            background-color: #111111;
+        }
+
+        .hero-text {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #dddddd;
+        }
+
+        .hero-text p {
+            margin-bottom: 8px;
+        }
+
+        .hero-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .links-group a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-weight: 600;
+        }
+
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 8px;
+        }
+
+        .info-item {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .info-item b {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .tag {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            color: #cccccc;
+            border: 1px solid #222222;
+            padding: 4px 10px;
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 16px;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #dddddd;
+        }
+
+        .timeline-year {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .contact-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-weight: 600;
+        }
+
+        footer {
+            padding: 16px 24px;
+            font-size: 11px;
+            color: #555555;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 12px; }
+            .grid-layout { grid-template-columns: 1fr; }
+            .col-left { border-right: none; border-bottom: 1px solid #222222; padding: 24px 20px; gap: 24px; }
+            .box { padding: 24px 20px; }
+            .about-wrap { flex-direction: column; }
+            footer { flex-direction: column; gap: 6px; padding: 16px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="grid-layout">
+            <div class="col-left">
+                <div>
+                    <h1>ABOUT</h1>
+                </div>
+                <div>
+                    <div class="section-label">SITE NAVIGATION</div>
+                    <nav>
+                        <ul>
+                            <li><a href="../index.html">home</a></li>
+                            <li><a href="about.html">about</a><span>&nbsp;&nbsp;&nbsp;$</span></li>
+                            <li><a href="#projects">projects</a></li>
+                            <li><a href="#games">games</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="box">
+                    <div class="section-label">ABOUT ME</div>
+                    <div class="about-wrap">
+                        <img class="about-img" src="me.jpg" alt="Sanjay S">
+                        <div class="hero-text">
+                            <p>Hey, I'm Sanjay.</p>
+                            <p>I'm a computer science student from Kerala, India, turning random ideas into projects and learning along the way.</p>
+                            <p>From building a laptop security system to managing Minecraft servers and helping organize college events, I've always enjoyed figuring things out hands-on.</p>
+                            <p>When I'm away from my projects, I'm usually gaming, discovering something new online, or just going wherever my curiosity takes me.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="section-label">sanjay@localhost:~$ whoami</div>
+                    <div class="info-list">
+                        <div class="info-item"><b>name</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sanjay S</div>
+                        <div class="info-item"><b>location</b> &nbsp;&nbsp;&nbsp;Kerala, India</div>
+                        <div class="info-item"><b>focus</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Development &amp; Security</div>
+                        <div class="info-item"><b>status</b> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learning, building, breaking</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="section-label">sanjay@localhost:~$ cat skills.txt</div>
+                    <div class="tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Rust (a bit)</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">C</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Kotlin (a bit)</span>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="section-label">sanjay@localhost:~$ history</div>
+                    <div class="info-list">
+                        <div class="timeline-item"><span class="timeline-year">2026</span><span>Learing more abt Tech day by day and creating what i think is cool :D </span></div>
+                        <div class="timeline-item"><span class="timeline-year">2024</span><span>Tried to build some security side projects</span></div>
+                        <div class="timeline-item"><span class="timeline-year">2023</span><span>Started Learning Java and creating some Minecraft pluings for our server</span></div>
+                        <div class="timeline-item"><span class="timeline-year">2022</span><span>Found a Minecraft community where I started to Manage a Server</span></div>
+                        <div class="timeline-item"><span class="timeline-year">2020</span><span>Wrote my first line of code in school</span></div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="section-label">sanjay@localhost:~$ currently</div>
+                    <div class="info-list">
+                        <div class="info-item">~/learning &nbsp;&nbsp;&nbsp;&nbsp;dsa and security mainly</div>
+                        <div class="info-item">~/building &nbsp;&nbsp;&nbsp;&nbsp;this website and a cli tool</div>
+                        <div class="info-item">~/playing &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;whatever games are on my list</div>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="section-label">sanjay@localhost:~$ contact</div>
+                    <div class="contact-links">
+                        <a href="mailto:sanjaysanal3028@gmail.com">Email ↗</a>
+                        <a href="https://github.com/r3xyi4cool" target="_blank" rel="noopener">GitHub ↗</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <span>Made with 99 bugs and 1 feature ♥︎</span>
+            <span>© SANJAY S</span>
+        </footer>
+    </div>
+</body>
+</html>
