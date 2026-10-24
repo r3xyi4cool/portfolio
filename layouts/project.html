@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJECTS | SANJAY S</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+        }
+
+        .col-left {
+            border-right: 1px solid #222222;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 40px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .section-label {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 10px;
+            font-weight: 700;
+            color: #666666;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        nav span {
+            cursor: default;
+        }
+
+        .col-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            padding: 32px 28px;
+        }
+
+        .project-list {
+            display: flex;
+            flex-direction: column;
+            margin-top: 8px;
+        }
+
+        .project {
+            padding: 20px 0;
+            border-bottom: 1px solid #222222;
+        }
+
+        .project:first-child {
+            padding-top: 8px;
+        }
+
+        .project:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .project-name {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .project-desc {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #dddddd;
+            margin-bottom: 12px;
+        }
+
+        .project-desc p {
+            margin-bottom: 8px;
+        }
+
+        .project-desc p:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .project-link-soon {
+            color: #666666;
+            font-size: 13px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-weight: 600;
+        }
+
+        .project-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-weight: 600;
+        }
+
+        footer {
+            padding: 16px 24px;
+            font-size: 11px;
+            color: #555555;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 12px; }
+            .grid-layout { grid-template-columns: 1fr; }
+            .col-left { border-right: none; border-bottom: 1px solid #222222; padding: 24px 20px; gap: 24px; }
+            .box { padding: 24px 20px; }
+            footer { flex-direction: column; gap: 6px; padding: 16px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="grid-layout">
+            <div class="col-left">
+                <div>
+                    <h1>PROJECTS</h1>
+                </div>
+                <div>
+                    <div class="section-label">SITE NAVIGATION</div>
+                    <nav>
+                        <ul>
+                            <li><a href="../index.html">home</a></li>
+                            <li><a href="about.html">about</a></li>
+                            <li><a href="project.html">projects</a><span>&nbsp;&nbsp;&nbsp;$</span></li>
+                            <li><a href="games.html">games</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="box">
+                    <div class="section-label">sanjay@localhost:~$ ls projects/</div>
+                    <div class="project-list">
+                        <div class="project">
+                            <div class="project-name">Laptop Security System</div>
+                            <div class="project-desc">
+                                <p>A hardware and software project which me and my friends are doing for our college project submission. It focuses on protecting laptops from theft and other things using both hardware and software.</p>
+                            </div>
+                            <a class="project-link" href="https://github.com/r3xyi4cool/NodeX" target="_blank" rel="noopener">NodeX - GitHub ↗</a>
+                        </div>
+                        <div class="project">
+                            <div class="project-name">Computer Vision Projects</div>
+                            <div class="project-desc">
+                                <p>My first project was a Pothole Detection Model where I used YOLO models to predict potholes from an image or a batch of images.</p>
+                                <p>Then I did a project during my internship where I collected, created, and cleaned datasets and trained a rubber sap flow model to distinguish between rubber sap and the tree itself. This was just the first stage of the model.</p>
+                            </div>
+                            <div class="project-links">
+                                <a class="project-link" href="https://github.com/r3xyi4cool/ML-Pothole-Detection" target="_blank" rel="noopener">Pothole Detection – GitHub ↗</a>
+                                <a class="project-link" href="https://github.com/r3xyi4cool/Rubber-Detection" target="_blank" rel="noopener">Rubber Detection – GitHub ↗</a>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-name">Minecraft Plugins</div>
+                            <div class="project-desc">
+                                <p>I have created some Minecraft plugins for my Minecraft server, like tournaments, crystal training, RTP queue, levels plugin, spawn plugin, and staff management plugin.</p>
+                                <p>I have also created add-on plugins for other plugins, like Ultimate Clans and a fly add-on for EssentialsX.</p>
+                            </div>
+                            <span class="project-link-soon">Private – due to server policies</span>
+                        </div>
+                        <div class="project">
+                            <div class="project-name">CLI Tool</div>
+                            <div class="project-desc">
+                                <p>I created a CLI-based file filtering system in Rust which filters files according to their size.</p>
+                                <p>I also started building a CLI-based password manager in Rust and Tauri, which is now discontinued.</p>
+                                <p>Now building another CLI tool to make things easier for users. Further details will be provided later.</p>
+                            </div>
+                            <div class="project-links">
+                                <a class="project-link" href="https://github.com/r3xyi4cool/rustwalker" target="_blank" rel="noopener">File System – GitHub ↗</a>
+                                <a class="project-link" href="https://github.com/r3xyi4cool/CipherX" target="_blank" rel="noopener">Password Manager – GitHub ↗</a>
+                                <span class="project-link-soon">New CLI – not ready to show</span>
+                            </div>
+                        </div>
+                        <div class="project">
+                            <div class="project-name">Personal Website</div>
+                            <div class="project-desc">
+                                <p>This site, hand-coded with a simple, clean look. No frameworks, just good old plain HTML and CSS.</p>
+                            </div>
+                            <a class="project-link" href="https://github.com/r3xyi4cool/portfolio" target="_blank" rel="noopener">GitHub ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <span>Made with 99 bugs and 1 feature ♥︎</span>
+            <span>© SANJAY S</span>
+        </footer>
+    </div>
+</body>
+</html>

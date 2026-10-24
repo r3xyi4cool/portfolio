@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMES | SANJAY S</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+        }
+
+        .col-left {
+            border-right: 1px solid #222222;
+            padding: 32px 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 40px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .section-label {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 10px;
+            font-weight: 700;
+            color: #666666;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        nav span {
+            cursor: default;
+        }
+
+        .col-right {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box {
+            padding: 32px 28px;
+        }
+
+        .games-grid {
+            column-count: 2;
+            column-gap: 32px;
+            margin-top: 8px;
+        }
+
+        .game-item {
+            break-inside: avoid;
+            padding: 10px 0;
+            border-bottom: 1px solid #222222;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 13px;
+            letter-spacing: 0.05em;
+            line-height: 1.5;
+            color: #cccccc;
+        }
+
+        .game-item:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            padding: 16px 24px;
+            font-size: 11px;
+            color: #555555;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 12px; }
+            .grid-layout { grid-template-columns: 1fr; }
+            .col-left { border-right: none; border-bottom: 1px solid #222222; padding: 24px 20px; gap: 24px; }
+            .box { padding: 24px 20px; }
+            .games-grid { column-count: 1; }
+            footer { flex-direction: column; gap: 6px; padding: 16px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="grid-layout">
+            <div class="col-left">
+                <div>
+                    <h1>GAMES</h1>
+                </div>
+                <div>
+                    <div class="section-label">SITE NAVIGATION</div>
+                    <nav>
+                        <ul>
+                            <li><a href="../index.html">home</a></li>
+                            <li><a href="about.html">about</a></li>
+                            <li><a href="project.html">projects</a></li>
+                            <li><a href="games.html">games</a><span>&nbsp;&nbsp;&nbsp;$</span></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-right">
+                <div class="box">
+                    <div class="section-label">sanjay@localhost:~$ ls games/</div>
+                    <div class="games-grid">
+                        <div class="game-item">A Way Out</div>
+                        <div class="game-item">Amenti</div>
+                        <div class="game-item">Amnesia</div>
+                        <div class="game-item">Arknights: Endfield</div>
+                        <div class="game-item">Assassin's Creed</div>
+                        <div class="game-item">Assassin's Creed II</div>
+                        <div class="game-item">Assassin's Creed III</div>
+                        <div class="game-item">Assassin's Creed: Brotherhood</div>
+                        <div class="game-item">Assassin's Creed: Revelations</div>
+                        <div class="game-item">Batman: Arkham Asylum</div>
+                        <div class="game-item">Batman: Arkham City GOTY</div>
+                        <div class="game-item">Batman: Arkham Knight</div>
+                        <div class="game-item">Battlefield 1</div>
+                        <div class="game-item">Battlefield 2</div>
+                        <div class="game-item">Battlefield 3</div>
+                        <div class="game-item">Battlefield 4</div>
+                        <div class="game-item">Big Walk</div>
+                        <div class="game-item">Call of Duty 2</div>
+                        <div class="game-item">Call of Duty 4: Modern Warfare</div>
+                        <div class="game-item">Call of Duty: Advanced Warfare</div>
+                        <div class="game-item">Call of Duty: Ghosts</div>
+                        <div class="game-item">Call of Duty: Infinite Warfare</div>
+                        <div class="game-item">Call of Duty: Modern Warfare 2</div>
+                        <div class="game-item">Call of Duty: Modern Warfare 3</div>
+                        <div class="game-item">Call of Duty: Warzone</div>
+                        <div class="game-item">Call of Duty: World at War</div>
+                        <div class="game-item">Cairn</div>
+                        <div class="game-item">Car Mechanic Simulator 2018</div>
+                        <div class="game-item">Chained Together</div>
+                        <div class="game-item">Clair Obscur: Expedition 33</div>
+                        <div class="game-item">CS:GO</div>
+                        <div class="game-item">CS2</div>
+                        <div class="game-item">Comet</div>
+                        <div class="game-item">Construction Simulator</div>
+                        <div class="game-item">Dark Hours: Prologue</div>
+                        <div class="game-item">Dead Island</div>
+                        <div class="game-item">Delta Force</div>
+                        <div class="game-item">Demonologist</div>
+                        <div class="game-item">Deus Ex: Human Revolution</div>
+                        <div class="game-item">Devour</div>
+                        <div class="game-item">Dota Underlords</div>
+                        <div class="game-item">Dragon's Dogma II</div>
+                        <div class="game-item">Dying Light 1</div>
+                        <div class="game-item">Dying Light 2</div>
+                        <div class="game-item">Elden Ring</div>
+                        <div class="game-item">Fall Guys</div>
+                        <div class="game-item">Far Cry 1</div>
+                        <div class="game-item">Far Cry 2</div>
+                        <div class="game-item">Far Cry 3</div>
+                        <div class="game-item">Far Cry 4</div>
+                        <div class="game-item">Far Cry 5</div>
+                        <div class="game-item">Fever Meme</div>
+                        <div class="game-item">Final Sentence</div>
+                        <div class="game-item">Firewatch</div>
+                        <div class="game-item">Forever Ago</div>
+                        <div class="game-item">Ghost of Tsushima Director's Cut</div>
+                        <div class="game-item">Hitman: World of Assassination</div>
+                        <div class="game-item">Hollow Knight</div>
+                        <div class="game-item">House Flipper</div>
+                        <div class="game-item">Hue</div>
+                        <div class="game-item">Human: Fall Flat</div>
+                        <div class="game-item">Inside</div>
+                        <div class="game-item">In Silence</div>
+                        <div class="game-item">Layers of Fear</div>
+                        <div class="game-item">Left 4 Dead 2</div>
+                        <div class="game-item">Liar's Bar</div>
+                        <div class="game-item">Limbo</div>
+                        <div class="game-item">Madison</div>
+                        <div class="game-item">Marvel Snap</div>
+                        <div class="game-item">Mecha Chameleon</div>
+                        <div class="game-item">Metro: Last Light</div>
+                        <div class="game-item">Minecraft</div>
+                        <div class="game-item">Minecraft Dungeons</div>
+                        <div class="game-item">Minecraft Dungeons 2</div>
+                        <div class="game-item">Mortal Kombat</div>
+                        <div class="game-item">Need for Speed: Most Wanted</div>
+                        <div class="game-item">No More Room in Hell</div>
+                        <div class="game-item">Once Human</div>
+                        <div class="game-item">Ori and the Will of the Wisps</div>
+                        <div class="game-item">Over the Hill</div>
+                        <div class="game-item">PUBG PC</div>
+                        <div class="game-item">Phasmophobia</div>
+                        <div class="game-item">Plants vs. Zombies: Replanted</div>
+                        <div class="game-item">Rail World (a little)</div>
+                        <div class="game-item">Ranch Simulator</div>
+                        <div class="game-item">Red Dead Redemption 2</div>
+                        <div class="game-item">Resident Evil 1</div>
+                        <div class="game-item">Resident Evil 2</div>
+                        <div class="game-item">Resident Evil 3</div>
+                        <div class="game-item">Resident Evil 4</div>
+                        <div class="game-item">Resident Evil 5</div>
+                        <div class="game-item">Resident Evil 7: Biohazard</div>
+                        <div class="game-item">Resident Evil 8: Village</div>
+                        <div class="game-item">Resident Evil 9: Requiem</div>
+                        <div class="game-item">Risk of Rain 2</div>
+                        <div class="game-item">Road to Vostok</div>
+                        <div class="game-item">RV There Yet?</div>
+                        <div class="game-item">Sifu</div>
+                        <div class="game-item">Silent Hill 2</div>
+                        <div class="game-item">Silent Hill f</div>
+                        <div class="game-item">Sekiro: Shadows Die Twice</div>
+                        <div class="game-item">Shadow of the Tomb Raider</div>
+                        <div class="game-item">Skate</div>
+                        <div class="game-item">Sky: Children of the Light</div>
+                        <div class="game-item">Sniper Ghost Warrior Contracts</div>
+                        <div class="game-item">Sons of the Forest</div>
+                        <div class="game-item">Split Fiction</div>
+                        <div class="game-item">Standed Deep</div>
+                        <div class="game-item">Supermarket Together</div>
+                        <div class="game-item">Surface</div>
+                        <div class="game-item">The Forest</div>
+                        <div class="game-item">The Last of Us Part I</div>
+                        <div class="game-item">The Mortuary Assistant</div>
+                        <div class="game-item">The Red Button</div>
+                        <div class="game-item">The First Descendant</div>
+                        <div class="game-item">The Walking Dead</div>
+                        <div class="game-item">The Witcher 3: Wild Hunt</div>
+                        <div class="game-item">Tiny Terraces</div>
+                        <div class="game-item">Tom Clancy's Ghost Recon: Wildlands</div>
+                        <div class="game-item">Trees Hate You</div>
+                        <div class="game-item">Valorant</div>
+                        <div class="game-item">Watch Dogs 2</div>
+                        <div class="game-item">Way of the Hunter 2</div>
+                        <div class="game-item">We Were Here Together</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <span>Made with 99 bugs and 1 feature ♥︎</span>
+            <span>© SANJAY S</span>
+        </footer>
+    </div>
+</body>
+</html>
